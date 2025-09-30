@@ -109,6 +109,8 @@ list_keys() {
 # Read a single key (leaf) and print JSON with path and secret content
 read_secret() {
   local key_path="$1"   # e.g. "app/config"
+  # Adjust throttle as needed
+  sleep .1
   # build URL
   local url="${BASE_URL}/${key_path}"
   local out
